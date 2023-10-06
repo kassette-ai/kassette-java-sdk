@@ -41,7 +41,7 @@ KassetteAnalytics analytics = KassetteAnalytics
 Map<String, Object> map = new HashMap<>();
 map.put("name", "John Marshal");
 map.put("email", "john@example.com");
-analytics.enqueue(IdentifyMessage.builder()
+analytics.enqueue(ReportingMessage.builder()
         .userId("6754ds7d9")
         .traits(map)
 );
