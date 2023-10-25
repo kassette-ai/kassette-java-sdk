@@ -22,7 +22,6 @@
         </developer>
     </developers>
 
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -115,10 +114,6 @@
                 <artifactId>central-publishing-maven-plugin</artifactId>
                 <version>0.1.2</version>
                 <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>central</publishingServerId>
-                    <tokenEnabled>true</tokenEnabled>
-                </configuration>
             </plugin>
 
         </plugins>
