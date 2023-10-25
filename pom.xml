@@ -5,6 +5,23 @@
     <groupId>ai.kassette</groupId>
     <artifactId>kassette-java-sdk</artifactId>
     <version>1.0.2-SNAPSHOT</version>
+    <name>Java SDK for Kassette</name>
+    <description>Send events to kassette server for easy streaming to other destinations</description>
+    <url>https://kassette.ai</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>ilikerashers</id>
+            <name>Jim Collins</name>
+            <url>https://github.com/ilikerashers</url>
+        </developer>
+    </developers>
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -14,7 +31,8 @@
     <scm>
         <connection>scm:git:https://github.com/kassette-ai/kassette-java-sdk</connection>
         <tag>kassette-java-sdk-1.0.1</tag>
-  </scm>
+        <url>https://github.com/kassette-ai/kassette-java-sdk</url>
+    </scm>
     <dependencies>
         <dependency>
             <groupId>com.google.auto.value</groupId>
@@ -92,6 +110,17 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.1.2</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenEnabled>true</tokenEnabled>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
