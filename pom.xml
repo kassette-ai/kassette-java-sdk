@@ -4,7 +4,7 @@
 
     <groupId>ai.kassette</groupId>
     <artifactId>kassette-java-sdk</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <name>Java SDK for Kassette</name>
     <description>Send events to kassette server for easy streaming to other destinations</description>
     <url>https://kassette.ai</url>
@@ -30,7 +30,7 @@
     </properties>
     <scm>
         <connection>scm:git:https://github.com/kassette-ai/kassette-java-sdk</connection>
-        <tag>kassette-java-sdk-1.0.1</tag>
+        <tag>kassette-java-sdk-1.0.2</tag>
         <url>https://github.com/kassette-ai/kassette-java-sdk</url>
     </scm>
     <dependencies>
