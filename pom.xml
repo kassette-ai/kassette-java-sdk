@@ -4,7 +4,7 @@
 
     <groupId>ai.kassette</groupId>
     <artifactId>kassette-java-sdk</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -13,7 +13,7 @@
     </properties>
     <scm>
         <connection>scm:git:https://github.com/kassette-ai/kassette-java-sdk</connection>
-        <tag>kassette-java-sdk-1.0.0-SNAPSHOT</tag>
+        <tag>kassette-java-sdk-1.0.1</tag>
   </scm>
     <dependencies>
         <dependency>
@@ -83,6 +83,12 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
