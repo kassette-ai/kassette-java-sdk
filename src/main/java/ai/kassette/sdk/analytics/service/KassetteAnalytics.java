@@ -130,8 +130,8 @@ public class KassetteAnalytics {
 
   /** Fluent API for creating {@link KassetteAnalytics} instances. */
   public static class Builder {
-    private static final String DEFAULT_ENDPOINT = "https://hosted.rudderlabs.com/";
-    private static final String DEFAULT_PATH = "v1/batch";
+    private static final String DEFAULT_ENDPOINT = "https://server.kassette.ai/";
+    private static final String DEFAULT_PATH = "extract";
     private static final String DEFAULT_USER_AGENT = "analytics-java/" + AnalyticsVersion.get();
     private static final int MESSAGE_QUEUE_MAX_BYTE_SIZE = 1024 * 500;
 

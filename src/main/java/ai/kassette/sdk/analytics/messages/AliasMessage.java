@@ -26,7 +26,7 @@ public abstract class AliasMessage implements Message {
      * @param previousId The previous unique identifier for the user. See the Previous ID field docs
      *     for more detail.
      * @throws IllegalArgumentException if the previousId is null or empty
-     */
+     **/
     public static Builder builder(String previousId) {
         return new Builder(previousId);
     }

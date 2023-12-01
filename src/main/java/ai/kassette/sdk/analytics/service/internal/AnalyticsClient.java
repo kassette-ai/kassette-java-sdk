@@ -461,10 +461,9 @@ public class AnalyticsClient {
      * with every batch created
      *
      * <p>so formulae to determine the expected default size of the batch is
-     *
-     * @return: defaultSize = messages size + context size + metadata size + comma number + sequence
+     *  defaultSize = messages size + context size + metadata size + comma number + sequence
      *     digits
-     * @return
+     *
      */
     private static int getBatchDefaultSize(int contextSize, int currentMessageNumber) {
       // sample data: {"batch":[],"sentAt":"MMM dd, yyyy, HH:mm:ss tt","context":,"sequence":1} - 73
