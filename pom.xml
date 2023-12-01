@@ -4,7 +4,7 @@
 
     <groupId>ai.kassette</groupId>
     <artifactId>kassette-java-sdk</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
     <name>Java SDK for Kassette</name>
     <description>Send events to kassette server for easy streaming to other destinations</description>
     <url>https://kassette.ai</url>
@@ -28,7 +28,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <scm>
-        <connection>scm:git:https://github.com/kassette-ai/kassette-java-sdk</connection>
+        <connection>scm:git:https://github.com/kassette-ai/kassette-java-sdk.git</connection>
         <tag>kassette-java-sdk-1.0.1</tag>
         <url>https://github.com/kassette-ai/kassette-java-sdk</url>
     </scm>
@@ -74,6 +74,7 @@
             <version>1.0.0</version>
         </dependency>
 
+
     </dependencies>
     <distributionManagement>
         <snapshotRepository>
@@ -100,12 +101,12 @@
                         <goals>
                             <goal>sign</goal>
                         </goals>
-                        <configuration>
-                            <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
-                            </gpgArguments>
-                        </configuration>
+<!--                        <configuration>-->
+<!--                            <gpgArguments>-->
+<!--                                <arg>&#45;&#45;pinentry-mode</arg>-->
+<!--                                <arg>loopback</arg>-->
+<!--                            </gpgArguments>ß-->
+<!--                        </configuration>-->
                     </execution>
                 </executions>
             </plugin>
@@ -114,8 +115,40 @@
                 <artifactId>central-publishing-maven-plugin</artifactId>
                 <version>0.1.2</version>
                 <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <tokenEnabled>true</tokenEnabled>
+                </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <show>private</show>
+                    <nohelp>true</nohelp>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
